@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--线性布局容器，可以设置内容垂直排列或者横向排列
+orientation="vertical" 垂直排列
+orientation="horizontal" 水平排列
+容器单位 dp
+字体单位 sp
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<!--    简单控件 文本-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="hello Andriod"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        android:textColor="@color/green"
+        android:gravity="center"
+        android:background="@color/yellow"
+        />
+
+
+</LinearLayout>
