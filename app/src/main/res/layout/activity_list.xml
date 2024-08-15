@@ -15,9 +15,7 @@
         android:id="@+id/lv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/rl_nav"
-
-        >
+        android:layout_below="@+id/rl_nav">
 
     </ListView>
 </RelativeLayout>
