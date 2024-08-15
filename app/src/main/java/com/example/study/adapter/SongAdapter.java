@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.study.R;
@@ -48,7 +49,8 @@ public class SongAdapter extends BaseAdapter {
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
-        viewHolder.tv_img.setText(songs.get(position).getImg());
+        viewHolder.tv_img.setImageResource(songs.get(position).getImg());
+//        Picasso.get().load(songs.get(position).getImg()).into(viewHolder.tv_img);
         viewHolder.tv_song.setText(songs.get(position).getSong());
         viewHolder.tv_singer.setText(songs.get(position).getSinger());
         viewHolder.tv_lyricist.setText(songs.get(position).getLyricist());
@@ -58,7 +60,8 @@ public class SongAdapter extends BaseAdapter {
     }
 
     final class ViewHolder {
-        private TextView tv_img, tv_song, tv_singer, tv_lyricist, tv_time;
+        private TextView tv_song, tv_singer, tv_lyricist, tv_time;
+        private ImageView tv_img;
 
         public ViewHolder(View v) {
             this.tv_img = v.findViewById(R.id.item_img);

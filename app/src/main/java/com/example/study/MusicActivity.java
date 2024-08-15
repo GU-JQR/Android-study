@@ -24,10 +24,10 @@ public class MusicActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_music);
         for (int i = 0; i < 100; i++) {
-            Song s = new Song("1", "song" + i, "singer" + i, "lyricist" + i, "12:23");
+            Song s = new Song(R.drawable.zhoujielun, "song" + i, "singer" + i, "lyricist" + i, "12:23");
             songs.add(s);
         }
-        lv.findViewById(R.id.lv);
+        lv = findViewById(R.id.lv);
         adapter = new SongAdapter(songs, this);
         lv.setAdapter(adapter);
     }

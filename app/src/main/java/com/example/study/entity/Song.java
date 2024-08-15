@@ -1,7 +1,7 @@
 package com.example.study.entity;
 
 public class Song {
-    private String img;
+    private int img;
     private String song;
     private String singer;
     private String lyricist;
@@ -10,7 +10,7 @@ public class Song {
     public Song() {
     }
 
-    public Song(String img, String song, String singer, String lyricist, String time) {
+    public Song(int img, String song, String singer, String lyricist, String time) {
         this.img = img;
         this.song = song;
         this.singer = singer;
@@ -18,11 +18,11 @@ public class Song {
         this.time = time;
     }
 
-    public String getImg() {
+    public int getImg() {
         return img;
     }
 
-    public void setImg(String img) {
+    public void setImg(int img) {
         this.img = img;
     }
 
