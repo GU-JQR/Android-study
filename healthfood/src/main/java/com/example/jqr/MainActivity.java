@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.example.jqr.utils.DBHelper;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     // 声明按钮控件
 
@@ -23,6 +25,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //按钮绑定点击监听
         iv_foodlist.setOnClickListener(this);
         iv_aboutme.setOnClickListener(this);
+
+        DBHelper instance = DBHelper.getInstance(this);
+        instance.openReadLink();
+        instance.openwriteLink();
     }
 
     @Override
