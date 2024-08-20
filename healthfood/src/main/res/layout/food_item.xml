@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="100dp"
-    android:background="#FDFF00"
+    android:background="#81F23A"
     android:padding="10dp">
     <!--    图片  食物名称  不宜同吃    -->
     <ImageView
