@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--    顶部导航-->
+    <RelativeLayout
+        android:id="@+id/rl_nav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@mipmap/search_background">
+        <!--    左边返回按钮-->
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/btn_back"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp" />
+        <!--    中间文字 食品详情-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="食品详情"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_centerInParent="true" />
+        <!--    阅读倒计时-->
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10s"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp" />
+    </RelativeLayout>
+    <!--    食品图片-->
+    <ImageView
+        android:id="@+id/iv_foodpic"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@+id/rl_nav"
+        android:src="@mipmap/beer"
+        android:scaleType="centerCrop" />
+    <!--    标题-->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/food_info_middle_background"
+        android:layout_below="@+id/iv_foodpic"
+        android:layout_marginTop="15dp"
+        android:text="食物标题啤酒"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:paddingVertical="10dp"
+        android:paddingLeft="10dp" />
+    <!--    详细描述-->
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="猪肉是目前人们餐桌上最常见的肉类食物之一，猪瘦肉中富含铁，容易被人体吸收，能预防贫血。猪肉味甘咸，性平，有补虚、滋阴、养血、润燥的功效。"
+        android:textSize="16sp"
+        android:layout_below="@+id/tv_title"
+        android:background="@color/grey"
+        android:paddingHorizontal="10dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:paddingVertical="20dp" />
+    <!--    不宜同吃标题-->
+    <TextView
+        android:id="@+id/tv_noeat_title"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/food_info_middle_background"
+        android:layout_below="@+id/tv_desc"
+        android:layout_marginTop="15dp"
+        android:text="不宜同吃食物"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:paddingVertical="10dp"
+        android:paddingLeft="10dp" />
+    <!--    不宜同吃食物-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_noeat_title"
+        android:text="黄莲 虾  海鲜"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FFFF0000"
+        android:background="@color/grey"
+        android:paddingVertical="10dp"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="10dp" />
+
+
+</RelativeLayout>
