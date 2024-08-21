@@ -2,10 +2,13 @@ package com.example.jqr;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -59,6 +62,28 @@ public class FoodActivity extends AppCompatActivity implements View.OnClickListe
 
         //绑定ListView适配器
         lv.setAdapter(myAdapter);
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            /**
+             * adapterView ListView这个对象
+             * view 每一项的视图(自己编写的RelativeLayout)
+             * i 每一项的索引
+             * l 数据源索引
+             */
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Log.d("jqr", adapterView + " " + view + " " + i + " " + l);
+
+                //跳转操作 (将当前的食品对象传递到详情界面)
+                Food food = myDatas.get(i);
+                Intent intent = new Intent();
+                intent.setClass(FoodActivity.this, FoodDetailActivity.class);
+//                意图中捆绑一个对象 注意Food类
+                intent.putExtra("food", food);
+//                跳转界面
+                startActivity(intent);
+            }
+        });
     }
 
     //全局点击处理方法

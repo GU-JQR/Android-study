@@ -1,10 +1,14 @@
 package com.example.jqr.entiyt;
 
+import java.io.Serializable;
+
 /**
  * 食品类  模版
  * 属性 （编号  标题  不宜通吃 图片资源  食品详情）
+ * <p>
+ * 实现可序列化接口
  */
-public class Food {
+public class Food implements Serializable {
     private Integer id;
     private String foodTitle;
     private String foodEat;
