@@ -1,12 +1,14 @@
 package com.example.jqr.utils;
 
 import android.annotation.SuppressLint;
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -136,6 +138,28 @@ public class DBHelper extends SQLiteOpenHelper {
         //返回查询的结果集合
         return foodList;
     }
+
     //添加食品信息
+    public void addFood(Food food, Context context) {
+        String foodTitle = food.getFoodTitle();
+        String foodEat = food.getFoodEat();
+        String foodDesc = food.getFoodDesc();
+        String picPath = food.getPicPath();
+
+        //添加功能  写操作   mwdb  此时我们的mwDB对象需要先创建好
+        ContentValues values = new ContentValues();
+        values.put("foodname", foodTitle);
+        values.put("noeatfood", foodEat);
+        values.put("fooddesc", foodDesc);
+        values.put("picPath", picPath);
+        long row = mWDB.insert(TABLE_NAME, null, values);
+        //判断行数
+        if (row > 0) {
+            Toast.makeText(context, "添加成功", Toast.LENGTH_SHORT).show();
+
+        } else {
+            Toast.makeText(context, "添加失败", Toast.LENGTH_SHORT).show();
+        }
+    }
 
 }

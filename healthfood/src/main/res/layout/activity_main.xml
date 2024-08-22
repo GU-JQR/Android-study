@@ -18,13 +18,26 @@
         android:layout_gravity="center"
         android:scaleType="centerCrop" />
 
+    <Button
+        android:id="@+id/btn_addfood"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="添加食品"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:background="#2285f2"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:gravity="center" />
+
     <!--    按钮3  进入关于我们界面-->
     <ImageView
         android:id="@+id/iv_about_me"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:src="@mipmap/btn_food_about"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="30dp"
         android:layout_gravity="center"
         android:scaleType="centerCrop" />
 

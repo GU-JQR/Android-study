@@ -18,6 +18,16 @@ public class Food implements Serializable {
     public Food() {
     }
 
+    //补一个四个参数的构造函数
+
+
+    public Food(String foodTitle, String foodEat, String picPath, String foodDesc) {
+        this.foodTitle = foodTitle;
+        this.foodEat = foodEat;
+        this.picPath = picPath;
+        this.foodDesc = foodDesc;
+    }
+
     public Food(Integer id, String foodTitle, String foodEat, String picPath, String foodDesc) {
         this.id = id;
         this.foodTitle = foodTitle;

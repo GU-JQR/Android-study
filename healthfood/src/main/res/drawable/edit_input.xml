@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    点击激活的时候有一个样式-->
+    <item android:state_focused="true" android:drawable="@drawable/et_search_back2"/>
+<!--未激活-->
+    <item android:state_focused="false" android:drawable="@drawable/et_search_back"/>
+
+
+</selector>

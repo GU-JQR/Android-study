@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@mipmap/search_background">
+        <!--        左边返回按钮-->
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/baseline_arrow_back_ios_new_30"
+            android:scaleType="center" />
+        <!--        中间标题  添加食品-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加食品"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginLeft="100dp" />
+
+    </LinearLayout>
+    <!--    添加食品名称-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="食品名称"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp" />
+        <!--        编辑框-->
+        <EditText
+            android:id="@+id/et_foodname"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:paddingLeft="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/edit_input" />
+
+    </LinearLayout>
+    <!--    添加不宜同吃-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="不宜同吃"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp" />
+        <!--        编辑框-->
+        <EditText
+            android:id="@+id/et_noeat"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:paddingLeft="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/edit_input" />
+
+    </LinearLayout>
+    <!--    添加图片资源位置-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="图片位置"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp" />
+        <!--        编辑框-->
+        <EditText
+            android:id="@+id/et_picpath"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:paddingLeft="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/edit_input" />
+
+    </LinearLayout>
+    <!--    添加食品详情-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <!--    标签-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="食品描述"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp" />
+
+        <EditText
+            android:id="@+id/et_fooddesc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edit_input_multi"
+            android:gravity="start" />
+    </LinearLayout>
+
+    <!--    添加按钮-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:gravity="start">
+
+        <Button
+            android:id="@+id/btn_addfood"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="添  加"
+            android:textSize="25sp"
+            android:background="@drawable/btn_active_selector"
+            android:textColor="@color/btn_textcolor_selector"
+            android:textStyle="bold"
+            android:layout_gravity="right" />
+    </LinearLayout>
+</LinearLayout>
