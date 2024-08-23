@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 jump(MainActivity.this, FoodActivity.class);
                 break;
             case R.id.iv_about_me:
-
+                jump(MainActivity.this, AboutActivity.class);
                 break;
             case R.id.btn_addfood:
                 // 进入添加界面
