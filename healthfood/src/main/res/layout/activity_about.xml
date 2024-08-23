@@ -10,7 +10,8 @@
         android:layout_height="230dp">
 
     </androidx.viewpager.widget.ViewPager>
-    <!--    横向布局容器中 存款小圆点  小圆点数量应该和配置中加载过来的翻页数量对应 不要在布局中-->
+    <!--    横向布局容器中 存款小圆点  小圆点数量应该和配置中加载过来的翻页数量对应
+    不要在布局中-->
     <LinearLayout
         android:id="@+id/ll_point"
         android:layout_width="match_parent"
